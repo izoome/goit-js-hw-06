@@ -15,14 +15,15 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
 const galleryList = document.querySelector(".gallery");
 const galleryListItem = images
   .map(
     (image) =>
-      `<li><img scr="${image.url}" alt="${image.alt}" width="370"/><li>`
+      `<li><img src="${image.url}" alt="${image.alt}" width="370"/></li>`
   )
-
   .join("");
+
 galleryList.insertAdjacentHTML("afterbegin", `${galleryListItem}`);
 galleryList.style.display = "flex";
 galleryList.style.gap = "10px";
